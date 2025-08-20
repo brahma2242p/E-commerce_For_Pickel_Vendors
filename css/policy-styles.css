@@ -1,0 +1,53 @@
+/* Policy Page Specific Styles */
+.policy-container {
+    max-width: 900px;
+    margin: 120px auto 4rem auto; /* Margin-top for fixed navbar */
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.policy-container h1 {
+    font-size: 2.5rem;
+    color: var(--deep-maroon);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-orange);
+}
+
+.policy-container h2 {
+    font-size: 1.8rem;
+    color: var(--rich-charcoal);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.policy-container p, .policy-container li {
+    line-height: 1.8;
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+}
+
+.policy-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.policy-container a {
+    color: var(--primary-orange);
+    text-decoration: none;
+}
+
+.policy-container a:hover {
+    text-decoration: underline;
+}
+
+.policy-container strong {
+    color: var(--rich-charcoal);
+}
+body {
+    /* CORRECTED: Using the orange-red gradient from your main theme */
+    background: var(--orange-red-gradient);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
