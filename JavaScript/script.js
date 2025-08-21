@@ -16,12 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (event.ctrlKey && event.keyCode === 85) { // Ctrl+U
             event.preventDefault();
         }
-        if (event.ctrlKey && event.keyCode === 67) { // Ctrl+C
-            event.preventDefault();
-        }
-        if (event.ctrlKey && event.keyCode === 86) { // Ctrl+V
-            event.preventDefault();
-        }
+        
     });
     // First, verify the login status with the server
     await checkLoginStatus();
