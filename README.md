@@ -24,7 +24,7 @@ A full-stack **pickle e-commerce platform** built with ❤️ using **Java, JSP,
 ---
 ## ✨ Features  
 ### 👤 User Side  
-- 🔑 Login/Register/Forgot Password Pages.  
+- 🔑 Login/Register/Forgot Password Pages with E-mail OTP Authentication and Google OAuth 2.0.  
 - 📂 **Pickle Catalog** with dynamic product loading.  
 - 🛒 **Cart & Checkout** with up to **3 saved addresses**.  
 - 📑 **My Orders** with complete order history (items, prices, address).  
@@ -39,18 +39,25 @@ A full-stack **pickle e-commerce platform** built with ❤️ using **Java, JSP,
   - 📈 Sales Dashboard with analytics.  
 ---
 ## 🏗 Tech Stack  
-**Frontend:**  
+
+**Frontend**  
 - HTML5, CSS3, Vanilla JavaScript  
-**Backend:**  
-- Java, JSP, Servlets (Jakarta) 
-**Database:**  
-- Oracle SQL (local dev)  
-- PostgreSQL (Render / Supabase deployment)  
-**Authentication:**  
-- Firebase OTP (Under Development )
-**Deployment:**  
-- SupaBase (PostgreSQl Database)
-- Render Cloud (war deployment)  
+
+**Backend**  
+- Java, JSP, Servlets (Jakarta EE)  
+
+**Database**  
+- Oracle SQL (Local Development)  
+- PostgreSQL (Render / Supabase Deployment)  
+
+**Authentication**  
+- E-mail OTP Authentication  
+- Google OAuth 2.0  
+
+**Deployment**  
+- Render Cloud (WAR Deployment)  
+- Supabase (PostgreSQL Database Hosting)  
+ 
 ---
 ## ⚡ Architecture  
 ```mermaid
@@ -183,32 +190,38 @@ Cardinal Notation
     - git clone https://github.com/brahma2242p/spiceheritage-BrahmaReddy.git
     - cd spiceheritage-BrahmaReddy
   ### 2️⃣ Add Required JAR Files
-
-  - Place the following JAR files in your project lib/ folder (or classpath):
-
-  - gson-2.8.9.jar → For JSON parsing
-
-  - jbcrypt-0.4.jar → For password hashing
-
-  - postgresql-42.7.6.jar → PostgreSQL database driver
-
-  - jakarta.servlet-api-6.0.0.jar → For Jakarta Servlets support
+   -You need all required jar files in the repository
 
   - These libraries are necessary for the backend to compile and run properly.
   ### 3️⃣ Set Environment Variables
 
   - Set the following environment variables for your database connection:
 
-  - # Windows CMD
-  - set DB_URL=jdbc:postgresql://localhost:5432/your_database_name
-  - set DB_USER=your_db_user
-  - set DB_PASSWORD=your_db_password
+      - # Windows CMD
+    - set DB_URL=jdbc:postgresql://your_db_host:5432/your_db_name
+    - set DB_USER=your_db_user
+    - set DB_PASSWORD=your_db_password
+    
+    - set BREVO_SENDER_LOGIN=your_brevo_login_email
+    - set BREVO_SENDER_FROM_EMAIL=Your_email_Used_as_a_sender_email
+    - set BREVO_MASTER_PASSWORD=your-brevo-master-password
+    
+    - set GOOGLE_CLIENT_ID=your-google-client-id
+    - set GOOGLE_CLIENT_SECRET=your-google-client-secret
+    - set GOOGLE_REDIRECT_URI=http://your_website_name/google-callback
 
   - # Linux / Mac
-  - export DB_URL=jdbc:postgresql://localhost:5432/spiceheritage
-  - export DB_USER=your_db_user
-  - export DB_PASSWORD=your_db_password
-  - The project will read these variables to connect to the database dynamically.
+    - export DB_URL=jdbc:postgresql://your_db_host:5432/your_db_name
+    - export DB_USER=your_db_user
+    - export DB_PASSWORD=your_db_password
+    
+    - export BREVO_SENDER_LOGIN=your_brevo_login_email
+    - export BREVO_SENDER_FROM_EMAIL=Your_email_Used_as_a_sender_email
+    - export BREVO_MASTER_PASSWORD=your-brevo-master-password
+    
+    - export GOOGLE_CLIENT_ID=your-google-client-id
+    - export GOOGLE_CLIENT_SECRET=your-google-client-secret
+    - export GOOGLE_REDIRECT_URI=http://your_website_name/google-callback
 
   ### 4️⃣ Database Setup
 
