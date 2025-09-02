@@ -1,0 +1,208 @@
+/* My Orders Page Styles */
+
+body {
+    background-color: #f4f7f6;
+}
+
+/* Orders Container */
+.orders-container {
+    max-width: 900px;
+    margin: 120px auto 4rem auto; /* Adjust for fixed navbar */
+    padding: 2rem;
+}
+
+.orders-container h1 {
+    font-size: 2.5rem;
+    color: var(--deep-maroon);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Order Card */
+.order-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+/* Order Header */
+.order-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--light-peach);
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.order-card-header h4 {
+    margin: 0 0 0.25rem 0;
+    color: var(--rich-charcoal);
+    font-size: 1.2rem;
+}
+
+.order-card-header p {
+    margin: 0;
+    color: var(--dark-brown);
+    font-size: 0.9rem;
+}
+
+/* Order Total */
+.order-total {
+    text-align: right;
+    min-width: 150px;
+}
+
+.order-total span {
+    font-size: 0.8rem;
+    color: #666;
+    display: block;
+}
+
+.order-total strong {
+    font-size: 1.5rem;
+    color: var(--deep-maroon);
+}
+
+/* Order Items and Footer */
+.order-card-body,
+.order-card-footer {
+    display: none; /* Initially hidden */
+}
+
+.order-card.expanded .order-card-body,
+.order-card.expanded .order-card-footer {
+    display: block; /* Shown when the card is expanded */
+}
+
+.order-card-body {
+    padding: 1.5rem;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.order-item:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item-details {
+    flex: 1;
+    min-width: 250px;
+}
+
+.order-item-details span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 4px;
+}
+
+.order-item-price {
+    min-width: 80px;
+    text-align: right;
+}
+
+.order-item-price strong {
+    font-weight: bold;
+    color: var(--rich-charcoal);
+}
+
+/* Delivery Address */
+.order-card-footer {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.status-pending {
+    background-color: #ffebcc;
+    color: #996600;
+}
+
+.status-shipped {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-delivered {
+    background-color: #d4edda;
+    color: #155724;
+}
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* No Orders View */
+.no-orders {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.no-orders h2 {
+    color: var(--rich-charcoal);
+}
+
+.no-orders p {
+    color: #777;
+    font-size: 1rem;
+}
+
+.no-orders .cta-button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--deep-maroon);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.development-marquee {
+    background-color: var(--light-peach); 
+    color: var(--dark-brown);
+    padding: 8px 0;
+    position: fixed;
+    top: 80px; 
+    width: 100%;
+    z-index: 999;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.no-orders .cta-button:hover {
+    background-color: #8b1c1c;
+}

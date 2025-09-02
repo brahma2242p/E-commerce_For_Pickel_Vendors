@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Brahma Reddy</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="icon" type="image/png" href="../images/about.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-body">
+
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../images/about.jpg" alt="Logo" class="sidebar-logo">
+            <h3>Brahma Reddy</h3>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active"><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fas fa-lightbulb"></i> Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="admin-main-content">
+        <header class="admin-header">
+            <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <h1>Dashboard</h1>
+            <div class="admin-user-info">
+                <span>Welcome, <strong id="adminUsername">Admin</strong></span>
+                <a href="#" id="logout-btn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </header>
+
+        <main class="admin-dashboard">
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-box-open"></i></div>
+                    <div class="card-info">
+                        <h4>Total Products</h4>
+                        <p id="productCount">Loading...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <div class="card-info">
+                        <h4>Registered Users</h4>
+                        <p id="userCount">Loading...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-calendar-day"></i></div>
+                    <div class="card-info">
+                        <h4>Sales (This Month)</h4>
+                        <p id="monthlySales">Loading...</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="card-info">
+                        <h4>Sales (This Year)</h4>
+                        <p id="yearlySales">Loading...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-details">
+                <div class="details-card">
+                    <h4><i class="fas fa-history"></i> Recent Orders</h4>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentOrdersTable">
+                            </tbody>
+                    </table>
+                </div>
+                <div class="details-card">
+                    <h4><i class="fas fa-star"></i> Top Selling Products</h4>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Units Sold</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topProductsTable">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="JavaScript/admin-dashboard.js"></script>
+    <script src="JavaScript/admin-script.js"></script>
+</body>
+</html>

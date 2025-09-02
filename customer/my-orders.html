@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Orders - Brahma Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/my-orders-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/about.jpg" alt="Developer Photo" class="nav-logo-img">
+                <h2><a href="/index.html" style="color:white; text-decoration:none;">Brahma Reddy</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/catalog.html" class="nav-link">Catalog</a></li>
+                <li><a href="/index.html#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="/suggest.html" class="nav-link">Suggest</a></li>
+                <li><a href="/index.html#about" class="nav-link">About</a></li>
+                <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="profile-icon" id="profileIcon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">₹0</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="my-profile.html" class="dropdown-item">
+                        <i class="fas fa-user"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <a href="my-orders.html" class="dropdown-item">
+                        <i class="fas fa-box"></i>
+                        <span>My Orders</span>
+                    </a>
+                    <div class="dropdown-item logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+            <div class="navButton" id="navButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="development-marquee">
+        <marquee behavior="scroll" direction="left">This website is a project for demonstration purposes and is not fully functional. Some features are still under development. Log in with demo credentials to check the features i developed  mobile: 9012345678 and password: demo@123aA</marquee>
+    </div>
+
+    <div class="orders-container">
+        <h1>My Orders</h1>
+        <div id="ordersList">
+            <p>Loading your orders...</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Spice Heritage. All rights reserved.<br> Developed and Maintained by Brahma Reddy Palam</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>🛒 My Cart (<span id="cartItemCount">0</span> Items)</h3>
+            <span class="cart-total" id="cartTotal">₹0.00</span>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart"><p>Your cart is empty!</p></div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal"><strong>Subtotal: <span id="cartSubtotal">₹0.00</span></strong></div>
+            <div class="cart-buttons">
+                <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+                <button class="keep-shopping-btn" id="keepShoppingBtn">Keep Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="/JavaScript/my-orders.js"></script>
+    <script src="/JavaScript/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://jakarta.ee/xml/ns/jakartaee http://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Brahma ReddyPalam E-commerce</display-name>
+
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.ProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/api/products</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ImageServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.ImageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/api/product-image</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/api/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/api/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.CheckoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/checkout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyOrdersServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.MyOrdersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyOrdersServlet</servlet-name>
+        <url-pattern>/customer/my-orders</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyProfileServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.MyProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyProfileServlet</servlet-name>
+        <url-pattern>/customer/my-profile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddressServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AddressServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddressServlet</servlet-name>
+        <url-pattern>/address-manager</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateProfileServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.UpdateProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateProfileServlet</servlet-name>
+        <url-pattern>/update-profile</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/api/reset-password</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/admin/login</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AdminLogoutServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminLogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLogoutServlet</servlet-name>
+        <url-pattern>/admin/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminResetPasswordServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminResetPasswordServlet</servlet-name>
+        <url-pattern>/admin/reset-password</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DashboardDataServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.DashboardDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DashboardDataServlet</servlet-name>
+        <url-pattern>/admin/dashboard-data</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AdminProductServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminProductServlet</servlet-name>
+        <url-pattern>/admin/products</url-pattern>
+    </servlet-mapping>
+    
+    
+
+    <servlet>
+        <servlet-name>AdminProductListServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminProductListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminProductListServlet</servlet-name>
+        <url-pattern>/admin/api/products</url-pattern>
+    </servlet-mapping>
+    <!-- Add this servlet and mapping inside your <web-app> tag -->
+
+    <servlet>
+        <servlet-name>AdminOrderServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminOrderServlet</servlet-name>
+        <url-pattern>/admin/api/orders</url-pattern>
+    </servlet-mapping>
+    <!-- Add this servlet and mapping inside your <web-app> tag -->
+
+    <servlet>
+        <servlet-name>AdminUserListServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminUserListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminUserListServlet</servlet-name>
+        <url-pattern>/admin/api/users</url-pattern>
+    </servlet-mapping>
+    <!-- Add this new servlet and mapping for user details -->
+    <servlet>
+        <servlet-name>AdminUserDetailServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.AdminUserDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminUserDetailServlet</servlet-name>
+        <url-pattern>/admin/api/user-details</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckSessionServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.CheckSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckSessionServlet</servlet-name>
+        <url-pattern>/api/check-session</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GoogleLoginServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.GoogleLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoogleLoginServlet</servlet-name>
+        <url-pattern>/google-login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GoogleCallbackServlet</servlet-name>
+        <servlet-class>com.spiceheritage.web.GoogleCallbackServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoogleCallbackServlet</servlet-name>
+        <url-pattern>/google-callback</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>AdminAuthFilter</filter-name>
+        <filter-class>com.spiceheritage.web.AdminAuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdminAuthFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

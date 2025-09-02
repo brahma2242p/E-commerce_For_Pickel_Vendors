@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - Spice Heritage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/about.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/about.jpg" alt="Developer Photo" class="nav-logo-img">
+                <h2><a href="/index.html" style="color:white; text-decoration:none;">Brahma Reddy</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/catalog.html" class="nav-link active">Catalog</a></li>
+                <li><a href="/index.html#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="/suggest.html" class="nav-link">Suggest</a></li>
+                <li><a href="/index.html#about" class="nav-link">About</a></li>
+                <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="profile-icon" id="profileIcon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">₹0</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    
+                    <a href="/customer/my-profile.html" class="dropdown-item">
+                        <i class="fas fa-user"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <a href="/customer/my-orders.html" class="dropdown-item">
+                        <i class="fas fa-box"></i>
+                        <span>My Orders</span>
+                    </a>
+                    <div class="dropdown-item logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="navButton" id="navButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="development-marquee">
+        <marquee behavior="scroll" direction="left">This website is a project for demonstration purposes and is not fully functional. Some features are still under development. Log in with demo credentials to check the features i developed  mobile: 9012345678 and password: demo@123aA</marquee>
+    </div>
+
+    <section class="catalog-header">
+        <div class="container">
+            <h1>Our Pickle Collection</h1>
+            <p>Discover authentic flavors from our traditional recipes</p>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Pickles</button>
+                <button class="filter-btn" data-filter="veg">Vegetarian</button>
+                <button class="filter-btn" data-filter="non-veg">Non-Vegetarian</button>
+                <button class="filter-btn" data-filter="spicy">Extra Spicy</button>
+                <button class="filter-btn" data-filter="mild">Mild</button>
+            </div>
+            <div class="sort-options">
+                <select id="sortSelect">
+                    <option value="name">Sort by Name</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog-products">
+        <div class="container">
+            <div class="products-grid" id="catalogProducts">
+                </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Spice Heritage</h3>
+                    <p>Preserving traditions, one pickle at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/catalog.html">Catalog</a></li>
+                        <li><a href="/index.html#about">About</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Vegetarian Pickles</a></li>
+                        <li><a href="#">Non-Veg Pickles</a></li>
+                        <li><a href="#">Seasonal Specials</a></li>
+                        <li><a href="#">Gift Hampers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="/policies/shipping-policy.html">Shipping Policy</a></li>
+                        <li><a href="/policies/cancellation-refund.html">Cancellation & Refund</a></li>
+                        <li><a href="/policies/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/policies/terms-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Spice Heritage. All rights reserved.<br> Developed and Maintained by Brahma Reddy Palam</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>🛒 My Cart (<span id="cartItemCount">0</span> Items)</h3>
+            <span class="cart-total" id="cartTotal">₹0.00</span>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <p>Your cart is empty!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <strong>Subtotal: <span id="cartSubtotal">₹0.00</span></strong>
+            </div>
+            <div class="cart-buttons">
+                <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+                <button class="keep-shopping-btn" id="keepShoppingBtn">Keep Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+                <button class="close-modal" id="closeAuthModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-form active" id="loginForm">
+                    <h3>Welcome Back!</h3>
+                    <form id="loginFormSubmit">
+                        <div class="form-group">
+                            <label for="loginEmailOrMobile" class="sr-only">Email or Mobile</label>
+                            <input type="text" id="loginEmailOrMobile" name="emailOrMobile" placeholder="Email or Mobile" required autocomplete="username">
+                        </div>
+                        <div class="form-group password-group">
+                            <label for="loginPassword" class="sr-only">Password</label>
+                            <input type="password" id="loginPassword" name="password" placeholder="Password" required autocomplete="current-password">
+                            <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="form-options">
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="auth-btn">Login</button>
+                    </form>
+                    <div class="form-divider"><span>OR</span></div>
+                    <button type="button" class="google-signin-btn">
+                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+                        Sign in with Google
+                    </button>
+                </div>
+
+                <div class="auth-form" id="registerForm">
+                    <h3>Join Our Family!</h3>
+                    <form id="registerFormSubmit">
+                        <div id="register-step-1">
+                            <div class="form-group">
+                                <label for="registerName" class="sr-only">Full Name</label>
+                                <input type="text" id="registerName" name="name" placeholder="Full Name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="registerMobile" class="sr-only">Mobile Number</label>
+                                <input type="tel" id="registerMobile" name="mobile" placeholder="Mobile Number (10 digits)" required pattern="[6-9][0-9]{9}" maxlength="10" title="Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9." autocomplete="tel">
+                            </div>
+                            <div class="form-group">
+                                <label for="registerEmail" class="sr-only">Email</label>
+                                <input type="email" id="registerEmail" name="email" placeholder="Email" required autocomplete="email">
+                            </div>
+                            <div class="form-group password-group">
+                                <label for="registerPassword" class="sr-only">Password</label>
+                                <input type="password" id="registerPassword" name="password" placeholder="Password" required autocomplete="new-password">
+                                <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="form-group password-group">
+                                <label for="confirmPassword" class="sr-only">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+                                <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <button type="submit" class="auth-btn">Send OTP</button>
+                    </form>
+                    <div class="form-divider"><span>OR</span></div>
+                    
+                </div>
+                
+                <div class="auth-form" id="forgotPasswordForm">
+                    <h3>Find Your Account</h3>
+                    <form id="forgotPasswordSubmit">
+                        <div id="forgot-step-1" class="form-group">
+                            <label for="forgotEmailOrMobile" class="sr-only">Email or Mobile</label>
+                            <input type="text" id="forgotEmailOrMobile" name="emailOrMobile" placeholder="Enter Your Email " required>
+                        </div>
+                        <button type="submit" class="auth-btn">Send OTP</button>
+                        <button type="button" class="back-to-login">Back to Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>

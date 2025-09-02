@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile - Brahma Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/my-profile-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/images/about.jpg" alt="Brahma Reddy" class="nav-logo-img">
+                <h2><a href="/index.html" style="color:white; text-decoration:none;">Brahma Reddy</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/catalog.html" class="nav-link">Catalog</a></li>
+                <li><a href="/index.html#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="/suggest.html" class="nav-link">Suggest</a></li>
+                <li><a href="/index.html#about" class="nav-link">About</a></li>
+                <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="profile-icon" id="profileIcon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">₹0</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="my-profile.html" class="dropdown-item">
+                        <i class="fas fa-user"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <a href="my-orders.html" class="dropdown-item">
+                        <i class="fas fa-box"></i>
+                        <span>My Orders</span>
+                    </a>
+                    <div class="dropdown-item logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+            <div class="navButton" id="navButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="development-marquee">
+        <marquee behavior="scroll" direction="left">This website is a project for demonstration purposes and is not fully functional. Some features are still under development. Log in with demo credentials to check the features i developed  mobile: 9012345678 and password: demo@123aA</marquee>
+    </div>
+
+
+    <div class="profile-container">
+        <h1>My Profile</h1>
+        <div class="profile-grid">
+            <div class="profile-card">
+                <h3>Account Details</h3>
+                <div id="userDetails"><p>Loading...</p></div>
+            </div>
+            <div class="profile-card">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Saved Addresses</h3>
+                    <button id="addNewAddressBtn" class="btn-add-new-address"><i class="fas fa-plus"></i> Add New</button>
+                </div>
+                <div id="addressList"><p>Loading addresses...</p></div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <footer class="footer"></footer>
+    
+    <script src="/JavaScript/my-profile.js"></script>
+    <script src="/JavaScript/script.js"></script>
+</body>
+</html>

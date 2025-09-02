@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Brahma Reddy</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="icon" type="image/png" href="../images/about.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-login-body">
+
+    <div class="login-container">
+        <div class="login-header">
+            <img src="../images/about.jpg" alt="KNR Foods Logo" class="login-logo">
+            <h3>Admin Panel</h3>
+        </div>
+        <div class="admin-container">
+            <!-- Login Form -->
+            <div id="login-form-container">
+                <h2>Admin Login</h2>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p id="login-message" class="message"></p>
+                <a href="#" id="showResetFormLink" class="form-link">Forgot/Reset Password?</a>
+            </div>
+
+            <!-- Reset Password Form (Updated) -->
+            <div id="reset-form-container" style="display: none;">
+                <h2>Reset Admin Password</h2>
+                <form id="adminResetForm">
+                    <div class="form-group">
+                        <label for="reset-username">Username</label>
+                        <input type="text" id="reset-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reset-new-password">New Password</label>
+                        <input type="password" id="reset-new-password" name="newPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reset-confirm-password">Confirm New Password</label>
+                        <input type="password" id="reset-confirm-password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn">Reset Password</button>
+                </form>
+                <p id="reset-message" class="message"></p>
+                <a href="#" id="showLoginFormLink" class="form-link">Back to Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="JavaScript/admin-login.js"></script>
+    <script src="JavaScript/admin-script.js"></script>
+</body>
+</html>

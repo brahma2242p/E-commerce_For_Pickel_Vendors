@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product - Brahma Reddy</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="icon" type="image/png" href="../images/about.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-body">
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../images/about.jpg" alt="Logo" class="sidebar-logo">
+            <h3>Brahma Reddy</h3>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li class="active"><a href="products.html"><i class="fas fa-box-open"></i> Products</a></li>
+                <li><a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fas fa-lightbulb"></i> Suggestions</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="admin-main-content">
+        <header class="admin-header">
+            <h1 id="edit-product-title">Edit Product</h1>
+            <a href="products.html" class="btn">&larr; Back to Products</a>
+        </header>
+
+        <main class="admin-page-content">
+            <form class="admin-form" id="editProductForm">
+                <!-- Form will be populated by JavaScript -->
+                <p>Loading product details...</p>
+            </form>
+        </main>
+    </div>
+    <script src="JavaScript/admin-edit-product.js"></script>
+    <script src="JavaScript/admin-script.js"></script>
+</body>
+</html>

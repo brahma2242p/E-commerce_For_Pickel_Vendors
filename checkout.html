@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Brahma Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/checkout-styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/about.jpg" alt="Developer Photo" class="nav-logo-img">
+                <h2><a href="/index.html" style="color:white; text-decoration:none;">Brahma Reddy</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="/catalog.html" class="nav-link">Catalog</a></li>
+                <li><a href="/index.html#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="/suggest.html" class="nav-link">Suggest</a></li>
+                <li><a href="/index.html#about" class="nav-link">About</a></li>
+                <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="profile-icon" id="profileIcon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartBadge">₹0</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="/customer/my-profile.html" class="dropdown-item">
+                        <i class="fas fa-user"></i>
+                        <span>My Profile</span>
+                    </a>
+                    <a href="/customer/my-orders.html" class="dropdown-item">
+                        <i class="fas fa-box"></i>
+                        <span>My Orders</span>
+                    </a>
+                    <div class="dropdown-item logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </div>
+            <div class="navButton" id="navButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="development-marquee">
+        <marquee behavior="scroll" direction="left">This website is a project for demonstration purposes and is not fully functional. Some features are still under development. Log in with demo credentials to check the features i developed  mobile: 9012345678 and password: demo@123aA</marquee>
+    </div>
+
+    <div class="checkout-container">
+        <main class="checkout-main">
+            <div class="main-content">
+                <div class="step">
+                    <h3>Select a Saved Address</h3>
+                    <div id="addressSelector" class="address-selector"><p>Loading addresses...</p></div>
+                    <div class="saved-address-option">
+                        <input type="radio" id="newAddressRadio" name="selectedAddress" value="new">
+                        <label for="newAddressRadio">Use a new address</label>
+                    </div>
+                </div>
+                <form id="newAddressForm" class="step" style="display: none;">
+                    <h3>Enter New Shipping Address</h3>
+                    <div class="form-group"><input type="text" id="firstName" name="firstName" placeholder="First Name" required></div>
+                    <div class="form-group"><input type="text" id="lastName" name="lastName" placeholder="Last Name" required></div>
+                    <div class="form-group"><input type="text" id="address" name="address" placeholder="Address" required></div>
+                    <div class="form-group"><input type="text" id="apartment" name="apartment" placeholder="Apartment, suite, etc. (optional)"></div>
+                    <div class="form-row">
+                        <div class="form-group"><input type="text" id="city" name="city" placeholder="City" required></div>
+                        <div class="form-group"><input type="text" id="pincode" name="pincode" placeholder="Pincode" required></div>
+                        <div class="form-group"><input type="text" id="state" name="state" placeholder="State" required></div>
+                    </div>
+                    <div class="form-group"><input type="tel" id="mobile" name="mobile" placeholder="Mobile number" required></div>
+                </form>
+            </div>
+        </main>
+        <aside class="checkout-sidebar">
+            <div id="summaryItemsContainer" class="summary-items"></div>
+            <div class="summary-calculation">
+                <div class="calc-row"><span>Subtotal</span><span id="summarySubtotal">₹0.00</span></div>
+                <div class="calc-row"><span>Shipping</span><span id="summaryShipping">₹50.00</span></div>
+                <div class="calc-row"><span>Taxes (5%)</span><span id="summaryTaxes">₹0.00</span></div>
+            </div>
+            <div class="summary-total">
+                <div class="calc-row grand-total"><span>Total</span><span id="summaryGrandTotal">₹0.00</span></div>
+            </div>
+
+            <div class="payment-section">
+                <h3>Choose Payment Method</h3>
+                <div class="payment-option">
+                    <input type="radio" id="cod" name="payment-method" value="cod" checked>
+                    <label for="cod">Cash on Delivery (COD)</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="upi" name="payment-method" value="upi">
+                    <label for="upi">UPI Payment</label>
+                </div>
+            </div>
+
+            <button id="placeOrderBtn" class="place-order-btn">Place Order</button>
+        </aside>
+    </div>
+
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h3>🛒 My Cart (<span id="cartItemCount">0</span> Items)</h3>
+            <span class="cart-total" id="cartTotal">₹0.00</span>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <p>Your cart is empty!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <strong>Subtotal: <span id="cartSubtotal">₹0.00</span></strong>
+            </div>
+            <div class="cart-buttons">
+                <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+                <button class="keep-shopping-btn" id="keepShoppingBtn">Keep Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="auth-modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+                <button class="close-modal" id="closeAuthModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-form active" id="loginForm">
+                    <h3>Welcome Back!</h3>
+                    <form id="loginFormSubmit">
+                        <div class="form-group">
+                            <label for="loginEmailOrMobile" class="sr-only">Email or Mobile</label>
+                            <input type="text" id="loginEmailOrMobile" name="emailOrMobile" placeholder="Email or Mobile" required autocomplete="username">
+                        </div>
+                        <div class="form-group password-group">
+                            <label for="loginPassword" class="sr-only">Password</label>
+                            <input type="password" id="loginPassword" name="password" placeholder="Password" required autocomplete="current-password">
+                            <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                        </div>
+                        <div class="form-options">
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="auth-btn">Login</button>
+                    </form>
+                    <div class="form-divider"><span>OR</span></div>
+                    <button type="button" class="google-signin-btn">
+                        <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo">
+                        Sign in with Google
+                    </button>
+                </div>
+
+                <div class="auth-form" id="registerForm">
+                    <h3>Join Our Family!</h3>
+                    <form id="registerFormSubmit">
+                        <div id="register-step-1">
+                            <div class="form-group">
+                                <label for="registerName" class="sr-only">Full Name</label>
+                                <input type="text" id="registerName" name="name" placeholder="Full Name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="registerMobile" class="sr-only">Mobile Number</label>
+                                <input type="tel" id="registerMobile" name="mobile" placeholder="Mobile Number (10 digits)" required pattern="[6-9][0-9]{9}" maxlength="10" title="Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9." autocomplete="tel">
+                            </div>
+                            <div class="form-group">
+                                <label for="registerEmail" class="sr-only">Email</label>
+                                <input type="email" id="registerEmail" name="email" placeholder="Email" required autocomplete="email">
+                            </div>
+                            <div class="form-group password-group">
+                                <label for="registerPassword" class="sr-only">Password</label>
+                                <input type="password" id="registerPassword" name="password" placeholder="Password" required autocomplete="new-password">
+                                <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                            </div>
+                            <div class="form-group password-group">
+                                <label for="confirmPassword" class="sr-only">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+                                <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <button type="submit" class="auth-btn">Send OTP</button>
+                    </form>
+                    <div class="form-divider"><span>OR</span></div>
+                    
+                </div>
+                
+                <div class="auth-form" id="forgotPasswordForm">
+                    <h3>Find Your Account</h3>
+                    <form id="forgotPasswordSubmit">
+                        <div id="forgot-step-1" class="form-group">
+                            <label for="forgotEmailOrMobile" class="sr-only">Email or Mobile</label>
+                            <input type="text" id="forgotEmailOrMobile" name="emailOrMobile" placeholder="Enter Your Email " required>
+                        </div>
+                        <button type="submit" class="auth-btn">Send OTP</button>
+                        <button type="button" class="back-to-login">Back to Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="JavaScript/checkout.js"></script>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
