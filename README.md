@@ -6,7 +6,7 @@
 ![Database Deployment](https://img.shields.io/badge/DB%20Hosting-Supabase-brightgreen?logo=supabase) 
 
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=flat-square)](https://spiceheritage-brahmareddy.onrender.com/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=flat-square)](https://spice-heritage-42ae3a7d569e.herokuapp.com/index.html/)
 
 ## 📑 Table of Contents
 - [✨ Features](#-features)
@@ -48,14 +48,14 @@ A full-stack **pickle e-commerce platform** built with ❤️ using **Java, JSP,
 
 **Database**  
 - Oracle SQL (Local Development)  
-- PostgreSQL (Render / Supabase Deployment)  
+- PostgreSQL (Heroku / Supabase Deployment)  
 
 **Authentication**  
 - E-mail OTP Authentication  
 - Google OAuth 2.0  
 
 **Deployment**  
-- Render Cloud (WAR Deployment)  
+- Heroku Cloud (Github Deployment) 
 - Supabase (PostgreSQL Database Hosting)  
  
 ---
